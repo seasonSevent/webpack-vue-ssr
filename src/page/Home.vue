@@ -1,7 +1,6 @@
 <template>
     <div class="home">
         home 界面
-        {{item}}
     </div>
 </template>
 
@@ -9,7 +8,7 @@
     export default {
         name: "Home",
         asyncData({store,route}){
-            return store.dispatch("fetchItem",234234)
+            return store.dispatch("fetchItem")
         },
         computed:{
             item(){

@@ -1,6 +1,8 @@
 const path = require("path");
 const VUeLoaderPlugin = require("vue-loader/lib/plugin")
 
+const isProd = process.env.NODE_ENV === "production";
+
 module.exports ={
     mode:"production",
     output: {

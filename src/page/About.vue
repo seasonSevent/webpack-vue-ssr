@@ -11,8 +11,7 @@
     export default {
         name: "About",
         asyncData({store,route}){
-            console.log(route)
-            return store.dispatch("fetchItem",234234)
+            return store.dispatch("fetchItem")
         },
         computed:{
             item(){
