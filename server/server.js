@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const path = require("path")
 const fs = require("fs");
 const {createBundleRenderer} = require("vue-server-renderer");
 const serverBundle = require("../dist/vue-ssr-server-bundle.json")
@@ -12,6 +13,9 @@ const renderer = createBundleRenderer(serverBundle,{
     clientManifest
 })
 
+app.use("/",express.static(path.resolve(__dirname,"../static")))
+app.use("/static",express.static(path.resolve(__dirname,"../dist/")))
+
 app.get("*",(req,res)=>{
 
     const context = {
@@ -19,7 +23,16 @@ app.get("*",(req,res)=>{
     }
 
     renderer.renderToString(context,(err,html)=>{
-        res.send(html)
+        if (err){
+            if (err.code === 404){
+
+                res.status(404).end("Page not found")
+            }else{
+                res.status(500).end("Internal Server Error")
+            }
+        }else{
+            res.send(html)
+        }
     })
 
 })

@@ -676,6 +676,11 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
+babel-plugin-dynamic-import-webpack@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/babel-plugin-dynamic-import-webpack/download/babel-plugin-dynamic-import-webpack-1.1.0.tgz#955306608cdae6191cd1d3f50cf93826ff69f4e1"
+  integrity sha1-lVMGYIza5hkc0dP1DPk4Jv9p9OE=
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.npm.taobao.org/babel-plugin-syntax-async-functions/download/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -4289,6 +4294,11 @@ vue-router-sync@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npm.taobao.org/vue-router-sync/download/vue-router-sync-0.1.0.tgz#4b5b4ee1d1308b3f7ef36b5260f48c467d5a2773"
   integrity sha1-S1tO4dEwiz9+82tSYPSMRn1aJ3M=
+
+vue-router@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.npm.taobao.org/vue-router/download/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+  integrity sha1-RfWjo4Q+MXAsBh3YKTk1VOQyj4k=
 
 vue-server-renderer@^2.6.11:
   version "2.6.11"

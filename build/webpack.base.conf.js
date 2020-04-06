@@ -5,7 +5,8 @@ module.exports ={
     mode:"production",
     output: {
         path:path.resolve(__dirname,"../dist"),
-        filename: "[name].[hash].js"
+        filename: "[name].[hash].js",
+        publicPath: "/static"
     },
     resolve: {
         extensions: [".js",".vue",".json"],
