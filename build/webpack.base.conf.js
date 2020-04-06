@@ -7,9 +7,12 @@ module.exports ={
     mode:"production",
     output: {
         path:path.resolve(__dirname,"../dist"),
-        filename: "[name].[hash].js",
+        filename: "[name].[chunkhash].js",
         publicPath: "/"
     },
+    devtool: isProd
+        ? false
+        : '#cheap-module-source-map',
     resolve: {
         extensions: [".js",".vue",".json"],
         alias: {

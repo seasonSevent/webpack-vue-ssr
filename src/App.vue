@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <h3>hello ssr!</h3>
+        <h3>hello ssr! hot </h3>
         <ul>
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/about">About</router-link></li>
