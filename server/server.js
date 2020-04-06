@@ -13,7 +13,7 @@ const renderer = createBundleRenderer(serverBundle,{
     clientManifest
 })
 
-app.use("/",express.static(path.resolve(__dirname,"../static")))
+app.use("/",express.static(path.resolve(__dirname,"../dist")))
 app.use("/static",express.static(path.resolve(__dirname,"../dist/")))
 
 app.get("*",(req,res)=>{
