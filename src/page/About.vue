@@ -12,6 +12,9 @@
         name: "About",
         title:"about 界面",
         asyncData({store,route}){
+            if (route){
+                console.log(route.params)
+            }
             return store.dispatch("fetchItem")
         },
         computed:{
