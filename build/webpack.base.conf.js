@@ -1,6 +1,7 @@
 const path = require("path");
 const VUeLoaderPlugin = require("vue-loader/lib/plugin")
-
+const webpack = require("webpack")
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports ={
@@ -44,7 +45,11 @@ module.exports ={
             }
         ]
     },
-    plugins: [
-        new VUeLoaderPlugin()
+    plugins: isProd ? [
+        new VUeLoaderPlugin(),
+        new webpack.optimize.ModuleConcatenationPlugin(),
+    ] : [
+        new VUeLoaderPlugin(),
+        new FriendlyErrorsPlugin()
     ]
 }

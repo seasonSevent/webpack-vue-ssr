@@ -4,6 +4,10 @@ import {createRouter} from "./router"
 import {createStore} from "./store";
 import {sync} from "vuex-router-sync";
 
+import titleMixin from "./until/title-mixin"
+
+Vue.mixin(titleMixin)
+
 // 导出一个工厂函数，用于创建新的
 // 应用程序、router 和 store 实例
 export function createApp () {

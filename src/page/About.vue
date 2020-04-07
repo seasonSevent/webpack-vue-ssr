@@ -10,6 +10,7 @@
 <script>
     export default {
         name: "About",
+        title:"about 界面",
         asyncData({store,route}){
             return store.dispatch("fetchItem")
         },
