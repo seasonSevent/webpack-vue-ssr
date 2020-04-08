@@ -16,11 +16,6 @@ export function createRouter() {
                 name: "about",
                 path:"/about",
                 component:()=>import("../page/About")
-            },
-            {
-                name:"about-id",
-                path:"/about/:id",
-                component:()=>import("../page/About"),
             }
         ]
     })
